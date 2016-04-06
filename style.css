@@ -1,0 +1,99 @@
+.container
+{
+margin: auto;
+padding: auto;
+
+
+}
+
+
+.row
+{
+
+	margin-right: -15px;
+  margin-left: -15px;
+font-weight: bold;
+margin:10px;
+color:#777777;
+}
+
+.row nav ul a
+{
+margin: 20px;
+color: #777777;
+}
+
+.row h1
+{
+color: white;
+margin: -470px;
+font-weight: bold;
+font-size: 50px;
+font-family: 'Open Sans';
+}
+.row h3
+{
+color: white;
+margin: -390px;
+font-weight: ;
+font-size: 20px;
+font-family: 'Open Sans';
+}
+
+.row hr
+{
+width: 340px;
+color: red;
+}
+
+.aside h2
+{
+	margin-top:20px;
+color:#333333;
+font-weight:bold;
+}
+
+.aside p
+{
+
+color:#333333;	
+font-size: 15px;
+
+}
+
+
+
+
+
+
+.aside img
+{
+margin-top:px;
+
+
+}
+
+
+.aside2 img 
+{
+margin-top:px;
+
+}
+.banner-bg
+
+{
+
+
+	height: 100px;
+}
+.col-md-12 footer nav ul li
+{
+display: inline-block;
+}
+
+. li
+{
+display: inline-block;
+
+
+}
