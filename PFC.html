@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pierre-feuille-ciseaux</title>
+	<meta charset="utf-8">
+	<link href="CFP.css" rel="stylesheet">
+    <style type="text/css">
+    body{
+    margin: auto;
+    background-color: #f8f8f8;
+    width: 800px;
+    height: 500px;
+    color:blue;
+    }
+        #pierre
+    {
+    display: inline-block;
+    margin: 30px;
+    margin-top: 90px;
+    }
+    #feuille
+    {
+    display: inline-block;
+    margin: 30px;
+    margin-top: 90px;
+    }
+    #ciseaux
+    {
+    display: inline-block;
+    margin: 30px;
+    margin-top: 90px;
+    }
+    </style>
+
+	<script> 
+	function affiche() {
+
+    document.getElementById("1").innerHTML =affiche();
+}
+</script>
+</head>
+
+<body>
+
+<h1 text align="center">Le jeu pierre-feuille-ciseaux:</h1>
+
+
+<p id="decompte"></p>
+
+
+
+<script>
+
+    function reste(zetime, div) {
+    if (zetime>0) {
+      
+        var secondes = zetime - ((Math.floor(zetime / 60)) * 60);
+       
+        if(secondes < 10){secondes="0"+ secondes }
+         
+        document.getElementById(div).innerHTML = secondes;
+        var restant = zetime - 1;
+        setTimeout("reste(" + restant + ",'"+div+"')", 1000);
+    }
+    else {
+        document.getElementById(div).innerHTML = "choisit entre la pierre, la feuille ou les ciseaux:";
+    }
+}
+</script>
+ 
+<div id="decompte1">Temps restant</div>
+<script language="JavaScript">reste(3,"decompte1");</script>
+ 
+</script>
+
+<div id="pierre">
+<img src="img3.jpg" onclick ="affiche"() width="200" height="200" target="_blank"/>
+</div>
+
+<div id="feuille">
+<img src="img2.jpg" onclick ="affiche"() width="200" height="200" target="_blank"/>
+</div>
+
+<div id="ciseaux">
+<img src="img1.png" onclick ="affiche"() width="200" height="200" target="_blank"/>
+</div>
+
+
+
+<script>
+
+var choix; 
+var ordi;
+
+confirm("Start")
+choix = prompt ("Entrez un nombre entre 1 et 3 (1 = Pierre - 2 = Feuille - 3 = Ciseau)");
+if (isNaN(choix)) {
+alert("Vous n'avez pas entré un chiffre !");
+
+ }else {	
+switch (parseInt(choix)) {
+case 1:
+document.write("Vous avez choisi la pierre");
+break;
+case 2:
+document.write("Vous avez choisi la feuille");
+break;
+case 3:
+document.write("Vous avez choisi le ciseau");
+break;
+default:
+alert("Choix incorrect");
+break;
+}
+}
+</script>
+
+
+
+<script>
+ordi = Math.floor((Math.random()*3) + 1); 
+switch (parseInt(ordi)) {
+case 1:
+document.write("L'Ordi a choisi la pierre");
+break;
+case 2:
+document.write("L'Ordi a choisi la feuille");
+break;
+case 3:
+document.write("L'Ordi a choisi le ciseau");
+break;
+}
+</script>
+
+<script>
+if ((choix==1) && (ordi==1)) { 
+document.write("Vous avez tous les deux choisis Pierre, Egalité !");
+}
+if ((choix==2) && (ordi==2)) { 
+document.write("Vous avez tous les deux choisis Feuille, Egalité !");
+}
+if ((choix==3) && (ordi==3)) { 
+document.write("Vous avez tous les deux choisis Ciseau, Egalité !");
+}	
+if ((choix==1) && (ordi==2)) {
+document.write("La feuille bat la pierre, vous avez perdu.");
+}
+if ((choix==2) && (ordi==3)) {
+document.write("Le ciseau bat la feuille, vous avez perdu.");
+}
+if ((choix==3) && (ordi==1)) {
+document.write("La pierre bat le ciseau, vous avez perdu.");
+}
+if ((choix==1) && (ordi==3)) {
+document.write("La pierre bat le ciseau, vous avez gagné.");
+}
+if ((choix==2) && (ordi==1)) {
+document.write("La feuille bat la pierre, vous avez gagné.");
+}
+if ((choix==3) && (ordi==2)) {
+document.write("Le ciseau bat la feuille, vous avez gagné.");
+}
+</script>
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
